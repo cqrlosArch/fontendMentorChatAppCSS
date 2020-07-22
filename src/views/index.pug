@@ -1,0 +1,51 @@
+extends ./layouts/master.pug
+
+block title
+  title My Page - HTML and CSS solution
+
+
+block content
+  .container
+    .app
+      .UI
+        .heading
+          .prev
+            i.bx.bxs-chevron-left
+          .currentUser
+            img(src="./static/avatar.jpg", alt="avatar").avatar
+            .info-user 
+              h4.name Samuel Green
+              p.user-availability Available to Walk
+          .menu
+            i.bx.bx-dots-vertical-rounded
+        .display
+          .msg.msg-left
+            p.text-msg That sounds great. I’d be happy with that.
+          .msg.msg-left
+            p.text-msg Could you send over some pictures of your dog, please?
+          .msg.msg-right.dogs
+            .list-img  
+              img(src="./static/dog-image-1.jpg", alt="1").img-dog
+              img(src="./static/dog-image-2.jpg", alt="2").img-dog
+              img(src="./static/dog-image-3.jpg", alt="3").img-dog
+          .msg.msg-right
+            p.text-msg Here are a few pictures. She’s a happy girl!
+          .msg.msg-right
+            p.text-msg Can you make it?
+          .msg.msg-left
+            p.text-msg She looks so happy! The time we discussed works. How long shall I take her out for?
+          .msg.msg-left.price
+            .icon
+            p.time 30 minute walk
+            p.buy $29
+          .msg.msg-left.price
+            .icon
+            p.time 1 hour walk
+            p.buy $49
+        .input
+          input(placeholder="Type a message…").inputDisplay
+          i.bx.bxs-chevron-right-circle.icon-input
+      .header
+        h1.title Simple booking
+        p.paragraph Stay in touch with our dog walkers through the chat interface. This makes it easy to  discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and book again all through the chat
+

@@ -1,0 +1,13 @@
+.navigation {
+  background-color: #a4a4a4;
+  padding: 1rem;
+
+  .nav {
+    display: flex;
+    list-style: none;
+
+    & > li {
+      padding: 0.5rem;
+    }
+  }
+}

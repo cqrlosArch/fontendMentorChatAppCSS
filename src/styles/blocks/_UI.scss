@@ -1,0 +1,195 @@
+.UI {
+  max-width: 30%;
+  width: 220px;
+  height: 450px;
+  margin-left: 2rem;
+  border: 8px solid $white;
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: $appBackground;
+  box-shadow: 5px 10px 15px 4px rgba(0, 0, 0, 0.23);
+
+  @media screen and (max-width: 650px) {
+    min-width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+  }
+
+  .heading {
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    color: $appBackground;
+    background: linear-gradient(to left, $startGradient -1%, $endGradient 50%);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: $white;
+      top: -5px;
+      width: 7.5rem;
+      height: 3rem;
+      border-radius: 12px;
+      transform: translateY(-60%);
+    }
+
+    .prev {
+      color: $white;
+      width: 10%;
+      margin-left: 0.5rem;
+    }
+    .currentUser {
+      width: 80%;
+      display: flex;
+      .avatar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        max-width: 25px;
+        border-radius: 50%;
+        width: 100%;
+        border: 1px solid $white;
+      }
+      .info-user {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-right: 3rem;
+        .name {
+          font-size: 10px;
+          margin-bottom: -0.3rem;
+        }
+        .user-availability {
+          font-size: 8px;
+          color: $placeholderText;
+        }
+      }
+    }
+    .menu {
+      color: $white;
+      width: 10%;
+      margin-right: 0.4rem;
+    }
+  }
+
+  .display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 0.2rem;
+
+    .msg {
+      margin: 0.18rem 0.4rem;
+      border-radius: 10px;
+      line-height: 0.7rem;
+      font-size: 7px;
+      padding: 0rem 0.5rem;
+      max-width: 130px;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 1s ease-in-out, visibility .3s ease-in-out;
+
+      &.visible {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      &.msg-left {
+        align-self: flex-start;
+        color: $chatOnLeft;
+        background-color: #eee6f4;
+      }
+      &.msg-right {
+        align-self: flex-end;
+        color: $chatOnRight;
+        background-color: $white;
+        box-shadow: 4px 11px 15px -1px rgba(0, 0, 0, 0.14);
+
+        .list-img {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .img-dog {
+            width: 100%;
+            display: block;
+            margin: 0.3em;
+            border-radius: 8px;
+            max-width: 30px;
+          }
+        }
+      }
+      &.msg-right.dogs {
+        background-color: inherit;
+        width: 140px;
+        box-shadow: inherit;
+      }
+      &.msg-left.price {
+        display: flex;
+        width: 140px;
+        justify-content: space-around;
+        align-items: center;
+        background: linear-gradient(
+          to left,
+          $endGradient -1%,
+          $startGradient 100%
+        );
+        color: $white;
+        .icon {
+          width: 12px;
+          height: 12px;
+          border: 0.3px solid $appBackground;
+          border-radius: 50%;
+          margin-right: 0.3rem;
+        }
+
+        .time {
+          font-size: 6px;
+          width: 60px;
+          text-align: left;
+        }
+        .buy {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .input {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.8rem;
+
+    .inputDisplay {
+      border: none;
+      width: 90%;
+      padding: 0.3rem 1rem;
+      border-radius: 15px;
+      margin: 0.4rem auto;
+
+      &::placeholder {
+        font-size: 8px;
+        color: $placeholderText;
+        font-weight: 500;
+      }
+    }
+
+    .icon-input {
+      position: absolute;
+      transform: scale(1.4) translateX(55px);
+    }
+  }
+}

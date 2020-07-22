@@ -1,0 +1,42 @@
+.header{
+    width: 60%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+    align-items: flex-start;
+    padding-left: 3.5rem;
+    text-align: center;
+
+    @media screen and (max-width: 750px){
+        width: 60%;
+        margin: 0;
+        padding: 1rem;
+        align-items: center;
+       
+    }
+    .title{
+        color:$mainHeading;
+        font-weight: 500;
+
+        @media screen and (max-width: 750px){
+            padding-left: 0;
+            font-size: 30px;
+           
+        }
+    }
+    .paragraph{
+        margin-top: -.3rem;
+        color: $paragraph;
+        line-height: 1.8rem ;
+        text-align: left;
+
+        @media screen and (max-width: 750px){
+            padding-left: 10px;
+            font-size: inherit;
+            text-align: center;
+           
+        }
+        
+    }
+}
