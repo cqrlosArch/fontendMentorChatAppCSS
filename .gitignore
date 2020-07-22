@@ -1,2 +1,8 @@
 node_modules
 yarn.lock
+src
+webpack
+.browserslistrc
+fd.md
+package.json
+style-guide.md
